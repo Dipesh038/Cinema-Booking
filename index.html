@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cinemax Booking</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Cinemax Movie Booking</h1>
+    </header>
+    
+    <!-- Error message container -->
+    <div id="errorContainer" style="background-color: #ffdddd; color: #ff0000; padding: 10px; margin: 10px 0; border-radius: 5px; display: none;"></div>
+    
+    <main>
+      <section class="booking-form">
+        <h2>Book Your Tickets</h2>
+        
+        <form id="bookingForm">
+          <div class="form-group">
+            <label for="customerName">Name:</label>
+            <input type="text" id="customerName" name="customerName" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+              <option value="">-- Select Gender --</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          
+          <div class="container_2">
+            <div class="section-card">
+              <label>🎬 Movies:</label>
+              <select id="moviesSelect"></select>
+            </div>
+        
+            <div class="section-card">
+              <label>🏢 Theatres:</label>
+              <select id="theatresSelect"></select>
+            </div>
+        
+            <div class="section-card">
+              <label>🖥 Screens:</label>
+              <select id="screensSelect"></select>
+            </div>
+        
+            <div class="section-card">
+              <label>🕒 Shows:</label>
+              <select id="showsSelect"></select>
+            </div>
+        
+            <div class="section-card">
+              <label>💺 Seats:</label>
+              <select id="seatsSelect" multiple></select>
+            </div>
+        
+            <div class="section-card">
+              <label>💵 Payments:</label>
+              <select id="paymentsSelect"></select>
+            </div>
+        
+            <div class="section-card">
+              <label>⭐ Reviews:</label>
+              <select id="reviewsSelect"></select>
+            </div>
+        
+            <div class="section-card">
+              <label>🍿 Snacks:</label>
+              <select id="snacksSelect"></select>
+            </div>
+        
+            <div class="section-card">
+              <label>🔗 Booking Seats:</label>
+              <select id="bookingSeatsSelect"></select>
+            </div>
+          </div>
+          
+          <div class="booking-summary">
+            <h3>Booking Summary</h3>
+            <p>Selected Movie: <span id="selectedMovie">None</span></p>
+            <p>Selected Seats: <span id="selectedSeats">None</span></p>
+            <p>Total Price: $<span id="totalPrice">0.00</span></p>
+          </div>
+          
+          <button type="submit" class="btn-book">Book Now</button>
+        </form>
+      </section>
+      
+      <section class="booking-confirmation" id="bookingConfirmation" style="display: none;">
+        <h2>Booking Confirmed!</h2>
+        <div class="confirmation-details">
+          <p>Booking ID: <span id="bookingId"></span></p>
+          <p>Movie: <span id="confirmMovie"></span></p>
+          <p>Name: <span id="confirmName"></span></p>
+          <p>Gender: <span id="confirmGender"></span></p>
+          <p>Email: <span id="confirmEmail"></span></p>
+          <p>Seats: <span id="confirmSeats"></span></p>
+          <p>Total Paid: $<span id="confirmPrice"></span></p>
+        </div>
+        <button id="newBookingBtn" class="btn-book">Make Another Booking</button>
+      </section>
+    </main>
+    
+    <footer>
+      <p>&copy; 2025 Cinemax Booking System</p>
+    </footer>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
